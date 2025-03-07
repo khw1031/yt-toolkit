@@ -1,0 +1,23 @@
+{
+  "include": ["packages", "apps", "internal", "scripts"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "types": ["node", "vitest/globals"],
+    "paths": {
+      "@yt-toolkit": ["./packages/yt-toolkit/yt-toolkit/src"],
+      "@yt-toolkit/vitest-config": ["./internal/vitest-config"],
+      "@yt-toolkit/transcript": ["./packages/yt-toolkit/transcript/src"],
+      "@yt-toolkit/utils": ["./packages/yt-toolkit/utils/src"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

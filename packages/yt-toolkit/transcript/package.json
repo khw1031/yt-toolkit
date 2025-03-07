@@ -1,0 +1,22 @@
+{
+  "name": "@yt-toolkit/transcript",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cheerio": "^1.0.0-rc.12",
+    "@yt-toolkit/vitest-config": "workspace:*",
+    "@yt-toolkit/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.34"
+  }
+}

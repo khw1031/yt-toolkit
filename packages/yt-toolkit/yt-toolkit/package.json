@@ -1,0 +1,45 @@
+{
+  "name": "yt-toolkit",
+  "version": "1.0.0",
+  "description": "YouTube transcript, duration, and comments fetcher for browser and Node.js",
+  "type": "module",
+  "main": "dist/node/index.js",
+  "module": "dist/node/index.mjs",
+  "types": "dist/node/index.d.ts",
+  "browser": "dist/browser/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./dist/node/index.d.ts",
+      "browser": "./dist/browser/index.mjs",
+      "import": {
+        "node": "./dist/node/index.mjs",
+        "default": "./dist/browser/index.mjs"
+      },
+      "require": "./dist/node/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "youtube",
+    "transcript",
+    "comments",
+    "duration",
+    "video",
+    "browser"
+  ],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.1",
+  "dependencies": {
+    "@yt-toolkit/utils": "workspace:*",
+    "@yt-toolkit/transcript": "workspace:*"
+  }
+}

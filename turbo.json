@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+
+    "attw": {
+      "dependsOn": ["build"],
+      "inputs": ["dist/**", "package.json"],
+      "outputs": []
+    },
+    "lint": {
+      "cache": false
+    },
+    "test": {
+      "inputs": ["src/**/*.ts", "**/*.spec.ts", "**/*.test.ts"],
+      "outputs": []
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
